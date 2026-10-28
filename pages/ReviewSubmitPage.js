@@ -1,0 +1,87 @@
+const { expect } = require('@playwright/test');
+const { BasePage } = require('./BasePage');
+const { S } = require('../config/selectors');
+const { ValidationSummary } = require('../components/ValidationSummary');
+const { parseMoney } = require('../utils/parse');
+
+/** Review (/applications/:id/review) and the confirmation page it leads to (/applications/:id/confirmation). */
+class ReviewSubmitPage extends BasePage {
+  constructor(page) {
+    super(page);
+    this.validation = new ValidationSummary(page);
+  }
+
+  get submitButton() {
+    return this.$(S.review.submit);
+  }
+
+  /** Total modal premium: the dedicated element when present, otherwise the figure after the "Total Modal Premium" label. */
+  async premium() {
+    const el = this.$(S.review.premium);
+    if (await el.count()) return parseMoney(await el.textContent());
+    const m = (await this.reviewText()).match(/Total\s+(?:Modal\s+)?Premium\s*\$?\s*([\d,]+\.\d{2})/i);
+    return m ? parseMoney(m[1]) : NaN;
+  }
+
+  /** The itemised premiums of the review snapshot: base policy, rider and total modal premium (NaN when a figure is absent). */
+  async premiumBreakdown() {
+    const text = await this.reviewText();
+    const money = (label) => {
+      const m = text.match(new RegExp(`${label}\\s*\\$?\\s*([\\d,]+\\.\\d{2})`, 'i'));
+      return m ? parseMoney(m[1]) : NaN;
+    };
+    return { base: money('Base\\s+Policy\\s+Premium'), rider: money('Rider\\s+Premium'), total: money('Total\\s+(?:Modal\\s+)?Premium') };
+  }
+
+  /** Calculated age shown in the review snapshot (NaN when not shown). */
+  async calculatedAge() {
+    const el = this.$(S.review.age);
+    const raw = (await el.count()) ? (await el.textContent()) || '' : ((await this.reviewText()).match(/Calculated\s+Age\s*(\d+)/i) || [])[1] || '';
+    const m = String(raw).match(/\d+/);
+    return m ? Number(m[0]) : NaN;
+  }
+
+  /** Full text of the review area, for "review shows what was entered" checks. */
+  async reviewText() {
+    await expect(this.$(S.review.root)).toBeVisible();
+    return (await this.$(S.review.root).innerText()) || '';
+  }
+
+  /** Clicks Submit. A valid application moves to the confirmation page; an invalid one stays here with errors. */
+  async submit() {
+    await this.submitButton.click();
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  /** Reference number (WL + date + sequence) shown on the confirmation page. */
+  async referenceNumber() {
+    const el = this.$(S.review.reference);
+    await expect(el, 'the confirmation page with a reference number').toBeVisible({ timeout: 15_000 });
+    const text = ((await el.textContent()) || '').trim();
+    const m = text.match(/WL\d+/);
+    return m ? m[0] : text;
+  }
+
+  /** Current status. It is shown on the status page, which the confirmation page links to ("view status"). */
+  async statusText() {
+    const status = this.$(S.review.status);
+    if (!(await status.count())) {
+      const link = this.$(S.review.viewStatusLink);
+      if (await link.count()) {
+        await link.click();
+        await this.page.waitForLoadState('domcontentloaded');
+      }
+    }
+    return ((await status.textContent()) || '').trim();
+  }
+
+  /** True when no editable input remains on the page (a submitted application is read-only). */
+  async isReadOnly() {
+    const editable = this.page.locator(
+      'main input:not([type="hidden"]):not([disabled]):not([readonly]), main select:not([disabled]), main textarea:not([disabled]):not([readonly])',
+    );
+    return (await editable.count()) === 0;
+  }
+}
+
+module.exports = { ReviewSubmitPage };

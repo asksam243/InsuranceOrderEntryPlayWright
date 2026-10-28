@@ -1,0 +1,13 @@
+Unzip over your project folder, overwrite when asked. Your .env is not included, so it is kept.
+Includes package.json (adds: npm run discover:api).
+
+New in this version
+  - fixtures/index.js : API tests are SKIPPED as an environment issue when the API does not answer (set API_REQUIRED=true to make that a failure)
+  - scripts/discover-api.js : now also probes with your signed-in session
+  - config/env.js, .env.example : API_REQUIRED
+Carried over from the previous patch
+  - config/env.js, utils/dataBuilder.js : journeys sell SecureLife
+  - fixtures/index.js : 180 s first-login timeout
+  - scripts/healthcheck.js, package.json, test-design/*, docs/*
+
+Then:  npm run test:smoke
