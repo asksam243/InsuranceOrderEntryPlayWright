@@ -1,0 +1,2234 @@
+<testsuites id="" name="" tests="96" failures="21" skipped="29" errors="4" time="980.527645">
+<testsuite name="unit\framework.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="unit" tests="4" failures="0" skipped="0" time="0.693" errors="0">
+<testcase name="Framework self-checks › TC-FW-01 Evidence: diagnostics, screenshots, traces and videos are configured for debugging @regression @framework @p2 @seeded" classname="unit\framework.spec.js" time="0.06">
+<properties>
+<property name="scenario" value="FW-01">
+</property>
+<property name="risk" value="R38">
+</property>
+<property name="defect" value="RI-20">
+</property>
+</properties>
+</testcase>
+<testcase name="Framework self-checks › TC-FW-02 Environment: configuration is externalised and the health check classifies failures @regression @framework @p2" classname="unit\framework.spec.js" time="0.197">
+<properties>
+<property name="scenario" value="FW-02">
+</property>
+<property name="risk" value="R39">
+</property>
+</properties>
+</testcase>
+<testcase name="Framework self-checks › TC-FW-03 Test data: builders are unique per call and date boundaries are calculated correctly @regression @framework @p2" classname="unit\framework.spec.js" time="0.421">
+<properties>
+<property name="scenario" value="FW-03">
+</property>
+<property name="risk" value="R40">
+</property>
+</properties>
+</testcase>
+<testcase name="Framework self-checks › TC-FW-04 Traceability: every automated test maps to a case; every case maps to a risk @regression @framework @p2" classname="unit\framework.spec.js" time="0.015">
+<properties>
+<property name="scenario" value="FW-04">
+</property>
+<property name="risk" value="R39">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="e2e\workflow.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="7" failures="0" skipped="0" time="109.018" errors="1">
+<testcase name="Submission &amp; Status Tracking › TC-WF-V01 Partial application saved as draft; draft row on dashboard @regression @workflow @p1 @smoke @release-gate @seeded" classname="e2e\workflow.spec.js" time="7.221">
+<properties>
+<property name="scenario" value="WF-V01">
+</property>
+<property name="risk" value="R33">
+</property>
+<property name="defect" value="RI-16">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission &amp; Status Tracking › TC-WF-V02 Draft resumed with previously saved data intact @regression @workflow @p2 @seeded" classname="e2e\workflow.spec.js" time="16.953">
+<properties>
+<property name="scenario" value="WF-V02">
+</property>
+<property name="risk" value="R09">
+</property>
+<property name="risk" value="R33">
+</property>
+<property name="defect" value="RI-16">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 10000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › e2e\workflow.spec.js:32:3 › Submission & Status Tracking › TC-WF-V02 Draft resumed with previously saved data intact @regression @workflow @p2 @seeded 
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByTestId('step-back').or(getByRole('button', { name: /^(back|previous)/i })).first()
+
+
+       at ..\pages\BasePage.js:116
+
+      114 |
+      115 |   async back() {
+    > 116 |     await this.$(S.common.back).click();
+          |                                 ^
+      117 |   }
+      118 |
+      119 |   /**
+        at ClientInfoPage.back (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:116:33)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\e2e\workflow.spec.js:39:114
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\e2e-workflow-Submission-St-73faa-gression-workflow-p2-seeded-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Submission &amp; Status Tracking › TC-WF-V03 Full E2E: valid application submitted; reference number shown @regression @workflow @p1 @smoke @release-gate @e2e @api" classname="e2e\workflow.spec.js" time="17.719">
+<properties>
+<property name="scenario" value="WF-V03">
+</property>
+<property name="risk" value="R34">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission &amp; Status Tracking › TC-WF-V04 Submitted application is read-only @regression @workflow @p2" classname="e2e\workflow.spec.js" time="16.381">
+<properties>
+<property name="scenario" value="WF-V04">
+</property>
+<property name="risk" value="R36">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission &amp; Status Tracking › TC-WF-V05 Confirmation / status message shown after submission @regression @workflow @p3" classname="e2e\workflow.spec.js" time="17.135">
+<properties>
+<property name="scenario" value="WF-V05">
+</property>
+<property name="risk" value="R34">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission &amp; Status Tracking › TC-WF-V06 Dashboard status becomes Submitted after submission @regression @workflow @p1 @release-gate @seeded @e2e @api" classname="e2e\workflow.spec.js" time="17.751">
+<properties>
+<property name="scenario" value="WF-V06">
+</property>
+<property name="risk" value="R07">
+</property>
+<property name="risk" value="R34">
+</property>
+<property name="defect" value="RI-18">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission &amp; Status Tracking › TC-WF-V08 Review page reflects the entered client, product and premium (beneficiary persists on its step) @regression @workflow @p2 @smoke" classname="e2e\workflow.spec.js" time="15.858">
+<properties>
+<property name="scenario" value="WF-V08">
+</property>
+<property name="risk" value="R19">
+</property>
+<property name="issue" value="CL-03: the review snapshot lists client, product, premiums and status but no beneficiaries">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="integration\ui-api.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="4" failures="0" skipped="4" time="1.69" errors="0">
+<testcase name="UI &lt;-&gt; API integration › TC-DASH-V06 Dashboard status matches Application Status API @regression @dashboard @p2 @seeded @api" classname="integration\ui-api.spec.js">
+<properties>
+<property name="scenario" value="DASH-V06">
+</property>
+<property name="risk" value="R07">
+</property>
+<property name="defect" value="RI-18">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="UI &lt;-&gt; API integration › TC-WF-V07 Application detail status matches Status API @regression @workflow @p2 @seeded @api" classname="integration\ui-api.spec.js">
+<properties>
+<property name="scenario" value="WF-V07">
+</property>
+<property name="risk" value="R07">
+</property>
+<property name="risk" value="R34">
+</property>
+<property name="defect" value="RI-18">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="UI &lt;-&gt; API integration › TC-API-V07 Product detail API matches UI detail page @regression @api @p2 @seeded" classname="integration\ui-api.spec.js">
+<properties>
+<property name="scenario" value="API-V07">
+</property>
+<property name="risk" value="R37">
+</property>
+<property name="defect" value="RI-19">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="UI &lt;-&gt; API integration › TC-API-V12 UI/API validation parity for the same invalid input @regression @api @p2 @seeded" classname="integration\ui-api.spec.js">
+<properties>
+<property name="scenario" value="API-V12">
+</property>
+<property name="risk" value="R37">
+</property>
+<property name="defect" value="RI-19">
+</property>
+<property name="defect" value="RI-05">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="ui\auth.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="14" failures="1" skipped="6" time="33.384" errors="0">
+<testcase name="Authentication &amp; Session › TC-AUTH-V01 Valid agent logs in and lands on their draft application (BR-AUTH-010) @regression @authentication @p1 @smoke @release-gate @seeded" classname="ui\auth.spec.js" time="3.114">
+<properties>
+<property name="scenario" value="AUTH-V01">
+</property>
+<property name="risk" value="R01">
+</property>
+<property name="defect" value="RI-01">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V14 Admin logs in and lands on the dashboard (carried over from the starter project as AUTH-V01b) @regression @authentication @p2 @smoke" classname="ui\auth.spec.js" time="2.634">
+<properties>
+<property name="scenario" value="AUTH-V14">
+</property>
+<property name="risk" value="R01">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V02 Invalid password shows correct error message @regression @authentication @p2 @seeded" classname="ui\auth.spec.js" time="3.54">
+<properties>
+<property name="scenario" value="AUTH-V02">
+</property>
+<property name="risk" value="R02">
+</property>
+<property name="defect" value="RI-02">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V03 Blank username/password show mandatory field errors @regression @authentication @p2" classname="ui\auth.spec.js" time="1.564">
+<properties>
+<property name="scenario" value="AUTH-V03">
+</property>
+<property name="risk" value="R02">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V04 Logout clears session; protected route redirects to login @regression @authentication @p2 @smoke" classname="ui\auth.spec.js" time="4.588">
+<properties>
+<property name="scenario" value="AUTH-V04">
+</property>
+<property name="risk" value="R05">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V05 Direct /dashboard access without login is blocked @regression @authentication @p1 @smoke @release-gate" classname="ui\auth.spec.js" time="1.259">
+<properties>
+<property name="scenario" value="AUTH-V05">
+</property>
+<property name="risk" value="R04">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V06 Locked user cannot access dashboard; lock message shown @regression @authentication @p1 @release-gate @seeded" classname="ui\auth.spec.js" time="11.256">
+<properties>
+<property name="scenario" value="AUTH-V06">
+</property>
+<property name="risk" value="R02">
+</property>
+<property name="defect" value="RI-02">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveURL(expected) failed" type="expect.toHaveURL">
+<![CDATA[  [chromium] › ui\auth.spec.js:60:3 › Authentication & Session › TC-AUTH-V06 Locked user cannot access dashboard; lock message shown @regression @authentication @p1 @release-gate @seeded 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/login/
+    Received string:  "http://34.93.84.61:8081/change-password"
+    Timeout: 8000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 8000ms
+        19 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://34.93.84.61:8081/change-password"
+
+
+       at ..\pages\LoginPage.js:30
+
+      28 |   /** Still on the login page, with a message that matches the pattern, and no session. */
+      29 |   async expectRejected(pattern) {
+    > 30 |     await expect(this.page).toHaveURL(/\/login/);
+         |                             ^
+      31 |     const err = this.$(S.login.error);
+      32 |     await expect(err).toBeVisible();
+      33 |     if (pattern) await expect(err).toHaveText(pattern);
+        at LoginPage.expectRejected (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\LoginPage.js:30:29)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\auth.spec.js:62:23
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-auth-Authentication-Ses-5b3ef-tion-p1-release-gate-seeded-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Authentication &amp; Session › TC-AUTH-V11 Forgot-password flow (/forgot-password) @regression @authentication @p3" classname="ui\auth.spec.js" time="5.429">
+<properties>
+<property name="scenario" value="AUTH-V11">
+</property>
+<property name="risk" value="R06">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication &amp; Session › lockout (destructive) › TC-AUTH-V07 Account locks after five failed attempts @regression @authentication @p2 @seeded @api" classname="ui\auth.spec.js">
+<properties>
+<property name="skip" value="Set AGENT_LOCKOUT_EMAIL (a DISPOSABLE agent) to run the lockout test">
+</property>
+<property name="scenario" value="AUTH-V07">
+</property>
+<property name="risk" value="R03">
+</property>
+<property name="defect" value="RI-02">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication &amp; Session › password reset / OTP › TC-AUTH-V08 Password policy rejects weak password (reset/change) @regression @authentication @p2 @seeded" classname="ui\auth.spec.js">
+<properties>
+<property name="skip" value="Set AGENT_RESET_EMAIL (DISPOSABLE) and OTP_CODE to run the reset/OTP tests">
+</property>
+<property name="scenario" value="AUTH-V08">
+</property>
+<property name="risk" value="R06">
+</property>
+<property name="defect" value="RI-03">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication &amp; Session › password reset / OTP › TC-AUTH-V12 Reset OTP: wrong OTP rejected; correct OTP reaches new-password step @regression @authentication @p2" classname="ui\auth.spec.js">
+<properties>
+<property name="skip" value="Set AGENT_RESET_EMAIL (DISPOSABLE) and OTP_CODE to run the reset/OTP tests">
+</property>
+<property name="scenario" value="AUTH-V12">
+</property>
+<property name="risk" value="R06">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication &amp; Session › password reset / OTP › TC-AUTH-V13 New password identical to the current password is rejected @regression @authentication @p2 @seeded" classname="ui\auth.spec.js">
+<properties>
+<property name="skip" value="Set AGENT_RESET_EMAIL (DISPOSABLE) and OTP_CODE to run the reset/OTP tests">
+</property>
+<property name="scenario" value="AUTH-V13">
+</property>
+<property name="risk" value="R06">
+</property>
+<property name="defect" value="RI-03">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication &amp; Session › MFA › TC-AUTH-V09 MFA/OTP simulation login @regression @authentication @p2" classname="ui\auth.spec.js">
+<properties>
+<property name="skip" value="Set AGENT_MFA_EMAIL and OTP_CODE to run the MFA test">
+</property>
+<property name="scenario" value="AUTH-V09">
+</property>
+<property name="risk" value="R01">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication &amp; Session › session timeout › TC-AUTH-V10 Session timeout redirects to login @regression @authentication @p2" classname="ui\auth.spec.js">
+<properties>
+<property name="skip" value="Set SESSION_TIMEOUT_SECONDS (short, test env only) to run the timeout test">
+</property>
+<property name="scenario" value="AUTH-V10">
+</property>
+<property name="risk" value="R05">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="ui\beneficiaries.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="11" failures="6" skipped="0" time="199.99" errors="0">
+<testcase name="Beneficiary Management › TC-BEN-V01 Valid primary beneficiary added (card/row appears) @regression @beneficiary @p2 @smoke" classname="ui\beneficiaries.spec.js" time="12.988">
+<properties>
+<property name="scenario" value="BEN-V01">
+</property>
+<property name="risk" value="R24">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V02 Primary allocation below 100% blocks progression @regression @beneficiary @p1 @release-gate @seeded @api" classname="ui\beneficiaries.spec.js" time="21.407">
+<properties>
+<property name="scenario" value="BEN-V02">
+</property>
+<property name="risk" value="R24">
+</property>
+<property name="defect" value="RI-13">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\beneficiaries.spec.js:20:3 › Beneficiary Management › TC-BEN-V02 Primary allocation below 100% blocks progression @regression @beneficiary @p1 @release-gate @seeded @api › primary total 60% blocks Next 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "beneficiaries|Beneficiaries"
+    Received: "documents|Upload Document"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at BeneficiaryPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:26:13
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:24:5
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-beneficiaries-Beneficia-a84d5--p1-release-gate-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V03 Primary allocation above 100% blocks progression @regression @beneficiary @p2 @seeded @api" classname="ui\beneficiaries.spec.js" time="23.038">
+<properties>
+<property name="scenario" value="BEN-V03">
+</property>
+<property name="risk" value="R24">
+</property>
+<property name="defect" value="RI-13">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\beneficiaries.spec.js:37:3 › Beneficiary Management › TC-BEN-V03 Primary allocation above 100% blocks progression @regression @beneficiary @p2 @seeded @api 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "beneficiaries|Beneficiaries"
+    Received: "documents|Upload Document"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at BeneficiaryPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:44:11
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-beneficiaries-Beneficia-8db9f-n-beneficiary-p2-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V04 Secondary allocation validated separately @regression @beneficiary @p2" classname="ui\beneficiaries.spec.js" time="23.785">
+<properties>
+<property name="scenario" value="BEN-V04">
+</property>
+<property name="risk" value="R24">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\beneficiaries.spec.js:47:3 › Beneficiary Management › TC-BEN-V04 Secondary allocation validated separately @regression @beneficiary @p2 › secondary total 50% blocks Next 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "beneficiaries|Beneficiaries"
+    Received: "documents|Upload Document"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at BeneficiaryPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:54:13
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:52:5
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-beneficiaries-Beneficia-61007-y-regression-beneficiary-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V05 Minor beneficiary requires guardian details @regression @beneficiary @p1 @release-gate @seeded @api" classname="ui\beneficiaries.spec.js" time="23.113">
+<properties>
+<property name="scenario" value="BEN-V05">
+</property>
+<property name="risk" value="R25">
+</property>
+<property name="defect" value="RI-14">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expected a visible message matching /guardian details are required|guardian/i" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\beneficiaries.spec.js:63:3 › Beneficiary Management › TC-BEN-V05 Minor beneficiary requires guardian details @regression @beneficiary @p1 @release-gate @seeded @api › minor WITHOUT guardian is refused 
+
+    Error: expected a visible message matching /guardian details are required|guardian/i
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /guardian details are required|guardian/i }).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - expected a visible message matching /guardian details are required|guardian/i getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /guardian details are required|guardian/i }).first() with timeout 8000ms
+      - waiting for getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /guardian details are required|guardian/i }).first()
+
+
+       at ..\pages\BasePage.js:169
+
+      167 |       this.$$(S.common.anyError).filter({ hasText: pattern }).first(),
+      168 |       `expected a visible message matching ${pattern}`,
+    > 169 |     ).toBeVisible();
+          |       ^
+      170 |   }
+      171 |
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+        at BeneficiaryPage.expectErrorText (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:169:7)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:71:31
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:67:5
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-beneficiaries-Beneficia-88792--p1-release-gate-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V06 Trust type shows Trust Name, Trustee Name, Trust Date @regression @beneficiary @p3" classname="ui\beneficiaries.spec.js" time="11.298">
+<properties>
+<property name="scenario" value="BEN-V06">
+</property>
+<property name="risk" value="R27">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V07 Organization type shows registration and contact fields @regression @beneficiary @p3" classname="ui\beneficiaries.spec.js" time="11.106">
+<properties>
+<property name="scenario" value="BEN-V07">
+</property>
+<property name="risk" value="R27">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V08 Duplicate beneficiary (Name + DOB + Relationship) blocked @regression @beneficiary @p2 @seeded @api" classname="ui\beneficiaries.spec.js" time="23.966">
+<properties>
+<property name="scenario" value="BEN-V08">
+</property>
+<property name="risk" value="R26">
+</property>
+<property name="defect" value="RI-15">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expected a visible message matching /duplicate|already (added|exists)|same beneficiary/i" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\beneficiaries.spec.js:100:3 › Beneficiary Management › TC-BEN-V08 Duplicate beneficiary (Name + DOB + Relationship) blocked @regression @beneficiary @p2 @seeded @api 
+
+    Error: expected a visible message matching /duplicate|already (added|exists)|same beneficiary/i
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /duplicate|already (added|exists)|same beneficiary/i }).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - expected a visible message matching /duplicate|already (added|exists)|same beneficiary/i getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /duplicate|already (added|exists)|same beneficiary/i }).first() with timeout 8000ms
+      - waiting for getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /duplicate|already (added|exists)|same beneficiary/i }).first()
+
+
+       at ..\pages\BasePage.js:169
+
+      167 |       this.$$(S.common.anyError).filter({ hasText: pattern }).first(),
+      168 |       `expected a visible message matching ${pattern}`,
+    > 169 |     ).toBeVisible();
+          |       ^
+      170 |   }
+      171 |
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+        at BeneficiaryPage.expectErrorText (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:169:7)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:106:29
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-beneficiaries-Beneficia-6b8a4-n-beneficiary-p2-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V09 Removing a beneficiary updates running allocation total @regression @beneficiary @p2" classname="ui\beneficiaries.spec.js" time="15.94">
+<properties>
+<property name="scenario" value="BEN-V09">
+</property>
+<property name="risk" value="R28">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V10 At least one primary beneficiary is mandatory @regression @beneficiary @p2" classname="ui\beneficiaries.spec.js" time="20.122">
+<properties>
+<property name="scenario" value="BEN-V10">
+</property>
+<property name="risk" value="R24">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\beneficiaries.spec.js:121:3 › Beneficiary Management › TC-BEN-V10 At least one primary beneficiary is mandatory @regression @beneficiary @p2 › no beneficiaries blocks Next 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "beneficiaries|Beneficiaries"
+    Received: "documents|Upload Document"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at BeneficiaryPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:126:13
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\beneficiaries.spec.js:124:5
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-beneficiaries-Beneficia-294c1-y-regression-beneficiary-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary Management › TC-BEN-V11 Irrevocable beneficiary triggers legal confirmation dialog @regression @beneficiary @p2" classname="ui\beneficiaries.spec.js" time="13.227">
+<properties>
+<property name="scenario" value="BEN-V11">
+</property>
+<property name="risk" value="R27">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="ui\client-kyc-sensitive.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="4" failures="2" skipped="1" time="41.894" errors="0">
+<testcase name="Client / KYC - sensitive data › TC-CLI-V08 SSN masked after entry (only last four digits visible) @regression @client @p1 @release-gate @sensitive @seeded" classname="ui\client-kyc-sensitive.spec.js" time="7.66">
+<properties>
+<property name="scenario" value="CLI-V08">
+</property>
+<property name="risk" value="R12">
+</property>
+<property name="defect" value="RI-07">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / KYC - sensitive data › TC-CLI-V09 KYC upload rejects unsupported file type @regression @client @p2 @sensitive" classname="ui\client-kyc-sensitive.spec.js">
+<properties>
+<property name="scenario" value="CLI-V09">
+</property>
+<property name="risk" value="R30">
+</property>
+<property name="skip" value="No upload control on the KYC step (see DOC-V02 for the document step)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Client / KYC - sensitive data › TC-CLI-V10 PEP = Yes makes additional details mandatory @regression @client @p2 @sensitive" classname="ui\client-kyc-sensitive.spec.js" time="13.536">
+<properties>
+<property name="scenario" value="CLI-V10">
+</property>
+<property name="risk" value="R14">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-client-kyc-sensitive-Cl-886ef-ression-client-p2-sensitive-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\client-kyc-sensitive.spec.js:57:3 › Client / KYC - sensitive data › TC-CLI-V10 PEP = Yes makes additional details mandatory @regression @client @p2 @sensitive 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "kyc-financial|KYC, Financial, and Compliance"
+    Received: "product|Product & Policy Configuration"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at KycFinancialPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client-kyc-sensitive.spec.js:63:11
+
+    Error Context: ..\reports\test-results\ui-client-kyc-sensitive-Cl-886ef-ression-client-p2-sensitive-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Client / KYC - sensitive data › TC-CLI-V12 Income vs premium affordability validation @regression @client @p2 @sensitive @seeded @api" classname="ui\client-kyc-sensitive.spec.js" time="15.798">
+<properties>
+<property name="scenario" value="CLI-V12">
+</property>
+<property name="risk" value="R13">
+</property>
+<property name="defect" value="RI-08">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-client-kyc-sensitive-Cl-ecee6-ent-p2-sensitive-seeded-api-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="a very high premium against a very low income should raise an affordability warning or block" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\client-kyc-sensitive.spec.js:66:3 › Client / KYC - sensitive data › TC-CLI-V12 Income vs premium affordability validation @regression @client @p2 @sensitive @seeded @api 
+
+    Error: a very high premium against a very low income should raise an affordability warning or block
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).or(getByTestId('product-warning').or(locator('[data-testid="validation-error-alert"], .alert-warning, [role="alert"], .warning')).first()).filter({ hasText: /afford|20\s?%|exceed.*income|income|premium/i }).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - a very high premium against a very low income should raise an affordability warning or block getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).or(getByTestId('product-warning').or(locator('[data-testid="validation-error-alert"], .alert-warning, [role="alert"], .warning')).first()).filter({ hasText: /afford|20\s?%|exceed.*income|income|premium/i }).first() with timeout 8000ms
+      - waiting for getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).or(getByTestId('product-warning').or(locator('[data-testid="validation-error-alert"], .alert-warning, [role="alert"], .warning')).first()).filter({ hasText: /afford|20\s?%|exceed.*income|income|premium/i }).first()
+
+
+      76 |       pages.product.$$(S.common.anyError).or(pages.product.$(S.product.warning)).filter({ hasText: M.affordability }).first(),
+      77 |       'a very high premium against a very low income should raise an affordability warning or block',
+    > 78 |     ).toBeVisible();
+         |       ^
+      79 |   });
+      80 | });
+      81 |
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client-kyc-sensitive.spec.js:78:7
+
+    Error Context: ..\reports\test-results\ui-client-kyc-sensitive-Cl-ecee6-ent-p2-sensitive-seeded-api-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="ui\client.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="11" failures="4" skipped="0" time="105.129" errors="0">
+<testcase name="Client / Insured Information › TC-CLI-V01 Valid insured personal information enables next step @regression @client @p2 @smoke" classname="ui\client.spec.js" time="4.952">
+<properties>
+<property name="scenario" value="CLI-V01">
+</property>
+<property name="risk" value="R10">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V02 Mandatory personal fields validated inline @regression @client @p2" classname="ui\client.spec.js" time="3.13">
+<properties>
+<property name="scenario" value="CLI-V02">
+</property>
+<property name="risk" value="R10">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V03 DOB under 18 rejected (age boundary) @regression @client @p2 @seeded @api" classname="ui\client.spec.js" time="12.869">
+<properties>
+<property name="scenario" value="CLI-V03">
+</property>
+<property name="risk" value="R10">
+</property>
+<property name="defect" value="RI-04">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\client.spec.js:32:3 › Client / Insured Information › TC-CLI-V03 DOB under 18 rejected (age boundary) @regression @client @p2 @seeded @api › age 17 is rejected 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "client|Client / Insured Information"
+    Received: "address-contact|Address and Contact Information"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at ClientInfoPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:38:13
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:36:5
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-client-Client-Insured-I-5b08c-ession-client-p2-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V04 DOB over 65 rejected (age boundary) @regression @client @p2 @seeded @api" classname="ui\client.spec.js" time="12.76">
+<properties>
+<property name="scenario" value="CLI-V04">
+</property>
+<property name="risk" value="R10">
+</property>
+<property name="defect" value="RI-04">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\client.spec.js:49:3 › Client / Insured Information › TC-CLI-V04 DOB over 65 rejected (age boundary) @regression @client @p2 @seeded @api › age 66 is rejected 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "client|Client / Insured Information"
+    Received: "address-contact|Address and Contact Information"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at ClientInfoPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:55:13
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:53:5
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-client-Client-Insured-I-56b70-ession-client-p2-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V05 Future DOB rejected @regression @client @p1 @release-gate @seeded @api" classname="ui\client.spec.js" time="6.759">
+<properties>
+<property name="scenario" value="CLI-V05">
+</property>
+<property name="risk" value="R11">
+</property>
+<property name="defect" value="RI-05">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V06 Same-as-residential copies address to mailing address @regression @client @p3" classname="ui\client.spec.js" time="5.089">
+<properties>
+<property name="scenario" value="CLI-V06">
+</property>
+<property name="risk" value="R15">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V07 Invalid email and phone formats rejected @regression @client @p2" classname="ui\client.spec.js" time="13.726">
+<properties>
+<property name="scenario" value="CLI-V07">
+</property>
+<property name="risk" value="R15">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V11 Postal code format validated @regression @client @p3" classname="ui\client.spec.js" time="9.846">
+<properties>
+<property name="scenario" value="CLI-V11">
+</property>
+<property name="risk" value="R15">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V13 Calculated age shown on review matches the date of birth @regression @client @p2 @seeded" classname="ui\client.spec.js" time="16.449">
+<properties>
+<property name="scenario" value="CLI-V13">
+</property>
+<property name="risk" value="R10">
+</property>
+<property name="defect" value="RI-04">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="a client born exactly 35 years ago today (1991-10-28) should show age 35" type="expect.toBe">
+<![CDATA[  [chromium] › ui\client.spec.js:125:3 › Client / Insured Information › TC-CLI-V13 Calculated age shown on review matches the date of birth @regression @client @p2 @seeded 
+
+    Error: a client born exactly 35 years ago today (1991-10-28) should show age 35
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 35
+    Received: 36
+
+      129 |     const shown = await pages.review.calculatedAge();
+      130 |     await testInfo.attach('dob-and-age', { body: `DOB entered: ${formatDate(dob, 'iso')}\nToday (test machine, UTC): ${new Date().toISOString().slice(0, 10)}\nAge shown on review: ${shown}`, contentType: 'text/plain' });
+    > 131 |     expect(shown, `a client born exactly 35 years ago today (${formatDate(dob, 'iso')}) should show age 35`).toBe(35);
+          |                                                                                                              ^
+      132 |   });
+      133 |
+      134 |   test(...tc('CLI-V14'), async ({ pages }) => {
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:131:110
+
+    attachment #1: dob-and-age (text/plain) ────────────────────────────────────────────────────────
+    DOB entered: 1991-10-28
+    Today (test machine, UTC): 2026-10-28
+    Age shown on review: 36
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-client-Client-Insured-I-421e8-regression-client-p2-seeded-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V14 Name validation rejects digits and special characters @regression @client @p2" classname="ui\client.spec.js" time="12.79">
+<properties>
+<property name="scenario" value="CLI-V14">
+</property>
+<property name="risk" value="R15">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="still on the same step" type="expect.toBe">
+<![CDATA[  [chromium] › ui\client.spec.js:134:3 › Client / Insured Information › TC-CLI-V14 Name validation rejects digits and special characters @regression @client @p2 › digits in first name are rejected 
+
+    Error: still on the same step
+
+    still on the same step
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "client|Client / Insured Information"
+    Received: "address-contact|Address and Contact Information"
+
+    Call Log:
+    - Timeout 8000ms exceeded while waiting on the predicate
+
+       at ..\pages\BasePage.js:174
+
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+      173 |   async expectStillOnStep(titleBefore) {
+    > 174 |     await expect.poll(() => this.stepTitle(), { message: 'still on the same step' }).toBe(titleBefore);
+          |                                                                                      ^
+      175 |   }
+      176 |
+      177 |   async expectAdvanced(titleBefore) {
+        at ClientInfoPage.expectStillOnStep (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:174:86)
+        at expectBlocked (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\utils\assertions.js:7:17)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:141:13
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\client.spec.js:138:5
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-client-Client-Insured-I-a13d8-acters-regression-client-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Client / Insured Information › TC-CLI-V15 State is required and validated @regression @client @p2" classname="ui\client.spec.js" time="6.759">
+<properties>
+<property name="scenario" value="CLI-V15">
+</property>
+<property name="risk" value="R15">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="ui\dashboard.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="6" failures="3" skipped="0" time="61.149" errors="2">
+<testcase name="Agent Dashboard › TC-DASH-V01 Dashboard loads: draft/submitted summary and New Application CTA @regression @dashboard @p2 @smoke" classname="ui\dashboard.spec.js" time="1.121">
+<properties>
+<property name="scenario" value="DASH-V01">
+</property>
+<property name="risk" value="R07">
+</property>
+</properties>
+</testcase>
+<testcase name="Agent Dashboard › TC-DASH-V04 Draft can be resumed from dashboard with saved data @regression @dashboard @p2 @seeded" classname="ui\dashboard.spec.js" time="14.853">
+<properties>
+<property name="scenario" value="DASH-V04">
+</property>
+<property name="risk" value="R09">
+</property>
+<property name="defect" value="RI-16">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveValue(expected) failed" type="expect.toHaveValue">
+<![CDATA[  [chromium] › ui\dashboard.spec.js:19:3 › Agent Dashboard › TC-DASH-V04 Draft can be resumed from dashboard with saved data @regression @dashboard @p2 @seeded 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByTestId('client-first-name-input').or(getByLabel(/first name/i)).first()
+    Expected: "QaDAFCHUGV"
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" getByTestId('client-first-name-input').or(getByLabel(/first name/i)).first() with timeout 8000ms
+      - waiting for getByTestId('client-first-name-input').or(getByLabel(/first name/i)).first()
+
+
+      26 |     await expect(row, 'saved draft should be listed on the dashboard').toBeVisible();
+      27 |     await pages.dashboard.resume(row);
+    > 28 |     await expect(pages.client.$(S.client.firstName)).toHaveValue(client.firstName);
+         |                                                      ^
+      29 |   });
+      30 |
+      31 |   test(...tc('DASH-V05'), async ({ pages }) => {
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\dashboard.spec.js:28:54
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-dashboard-Agent-Dashboa-f1b2f-ression-dashboard-p2-seeded-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Agent Dashboard › TC-DASH-V05 Status filters (Draft/Submitted/Approved) return correct rows @regression @dashboard @p2" classname="ui\dashboard.spec.js" time="12.355">
+<properties>
+<property name="scenario" value="DASH-V05">
+</property>
+<property name="risk" value="R07">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.evaluate: Timeout 10000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › ui\dashboard.spec.js:31:3 › Agent Dashboard › TC-DASH-V05 Status filters (Draft/Submitted/Approved) return correct rows @regression @dashboard @p2 › filter = Draft 
+
+    TimeoutError: locator.evaluate: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByTestId('dashboard-status-filter').or(getByLabel(/status/i)).first()
+
+
+       at ..\pages\BasePage.js:60
+
+      58 |     if (value === undefined || value === null) return;
+      59 |     const el = this.$(def);
+    > 60 |     const tag = await el.evaluate((n) => n.tagName.toLowerCase());
+         |                          ^
+      61 |     if (tag !== 'select') {
+      62 |       await el.fill(String(value));
+      63 |       return;
+        at DashboardPage.choose (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:60:26)
+        at DashboardPage.filterByStatus (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\DashboardPage.js:92:16)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\dashboard.spec.js:35:31
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\dashboard.spec.js:34:7
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-dashboard-Agent-Dashboa-42153-ows-regression-dashboard-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Agent Dashboard › TC-DASH-V07 Dashboard search returns matching applications @regression @dashboard @p3" classname="ui\dashboard.spec.js" time="12.542">
+<properties>
+<property name="scenario" value="DASH-V07">
+</property>
+<property name="risk" value="R07">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.fill: Timeout 10000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › ui\dashboard.spec.js:43:3 › Agent Dashboard › TC-DASH-V07 Dashboard search returns matching applications @regression @dashboard @p3 
+
+    TimeoutError: locator.fill: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByTestId('dashboard-search').or(getByLabel(/search/i)).or(getByRole('searchbox')).or(getByPlaceholder(/search/i)).first()
+
+
+       at ..\pages\DashboardPage.js:97
+
+       95 |
+       96 |   async search(text) {
+    >  97 |     await this.$(S.dashboard.search).fill(text);
+          |                                      ^
+       98 |     await this.$(S.dashboard.search).press('Enter');
+       99 |     await this.page.waitForLoadState('networkidle');
+      100 |   }
+        at DashboardPage.search (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\DashboardPage.js:97:38)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\dashboard.spec.js:48:27
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-dashboard-Agent-Dashboa-e0df8-ons-regression-dashboard-p3-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Agent Dashboard › multi-agent isolation › TC-DASH-V02 Agent sees only own applications (multi-agent isolation) @regression @dashboard @p1 @release-gate @api" classname="ui\dashboard.spec.js" time="10.39">
+<properties>
+<property name="scenario" value="DASH-V02">
+</property>
+<property name="risk" value="R08">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\dashboard.spec.js:68:5 › Agent Dashboard › multi-agent isolation › TC-DASH-V02 Agent sees only own applications (multi-agent isolation) @regression @dashboard @p1 @release-gate @api 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('login-email-input').or(getByLabel(/e-?mail|user ?name/i)).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('login-email-input').or(getByLabel(/e-?mail|user ?name/i)).first() with timeout 8000ms
+      - waiting for getByTestId('login-email-input').or(getByLabel(/e-?mail|user ?name/i)).first()
+
+
+       at ..\pages\LoginPage.js:9
+
+       7 |   async goto() {
+       8 |     await this.page.goto(routes.login);
+    >  9 |     await expect(this.$(S.login.email)).toBeVisible();
+         |                                         ^
+      10 |   }
+      11 |
+      12 |   async login(user) {
+        at LoginPage.goto (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\LoginPage.js:9:41)
+        at LoginPage.loginViaUi (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\LoginPage.js:19:5)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\dashboard.spec.js:72:9
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-dashboard-Agent-Dashboa-1abfd-shboard-p1-release-gate-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Agent Dashboard - new agent › TC-DASH-V03 New agent sees empty-state copy and CTA @regression @dashboard @p3" classname="ui\dashboard.spec.js" time="9.888">
+<properties>
+<property name="scenario" value="DASH-V03">
+</property>
+<property name="risk" value="R07">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\dashboard.spec.js:89:3 › Agent Dashboard - new agent › TC-DASH-V03 New agent sees empty-state copy and CTA @regression @dashboard @p3 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('dashboard-empty-state').or(getByText(/no applications|get started|nothing here|no records/i)).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('dashboard-empty-state').or(getByText(/no applications|get started|nothing here|no records/i)).first() with timeout 8000ms
+      - waiting for getByTestId('dashboard-empty-state').or(getByText(/no applications|get started|nothing here|no records/i)).first()
+
+
+      89 |   test(...tc('DASH-V03'), async ({ pages }) => {
+      90 |     await pages.dashboard.goto();
+    > 91 |     await expect(pages.dashboard.$(S.dashboard.emptyState)).toBeVisible();
+         |                                                             ^
+      92 |     await expect(pages.dashboard.newApplicationControl).toBeVisible();
+      93 |     await expect(pages.dashboard.rows).toHaveCount(0);
+      94 |   });
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\dashboard.spec.js:91:61
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-dashboard-Agent-Dashboa-5533f-CTA-regression-dashboard-p3-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="ui\documents.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="7" failures="2" skipped="0" time="140.598" errors="1">
+<testcase name="Document Upload &amp; Validation Summary › TC-DOC-V01 Valid KYC document (PDF/JPG/PNG) uploads successfully @regression @document @p2 @smoke" classname="ui\documents.spec.js" time="17.399">
+<properties>
+<property name="scenario" value="DOC-V01">
+</property>
+<property name="risk" value="R30">
+</property>
+</properties>
+</testcase>
+<testcase name="Document Upload &amp; Validation Summary › TC-DOC-V02 Unsupported file type rejected @regression @document @p2 @api" classname="ui\documents.spec.js" time="16.296">
+<properties>
+<property name="scenario" value="DOC-V02">
+</property>
+<property name="risk" value="R30">
+</property>
+</properties>
+</testcase>
+<testcase name="Document Upload &amp; Validation Summary › TC-DOC-V03 File above maximum size rejected @regression @document @p2" classname="ui\documents.spec.js" time="17.643">
+<properties>
+<property name="scenario" value="DOC-V03">
+</property>
+<property name="risk" value="R30">
+</property>
+</properties>
+</testcase>
+<testcase name="Document Upload &amp; Validation Summary › TC-DOC-V04 Missing mandatory document blocks submission @regression @document @p1 @release-gate @seeded @api" classname="ui\documents.spec.js" time="15.694">
+<properties>
+<property name="scenario" value="DOC-V04">
+</property>
+<property name="risk" value="R29">
+</property>
+<property name="defect" value="RI-06">
+</property>
+</properties>
+</testcase>
+<testcase name="Validation Summary (review step with unresolved errors) › TC-VAL-V01 Validation summary lists all unresolved errors, grouped @regression @validation @p2" classname="ui\documents.spec.js" time="23.489">
+<properties>
+<property name="scenario" value="VAL-V01">
+</property>
+<property name="risk" value="R32">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\documents.spec.js:74:3 › Validation Summary (review step with unresolved errors) › TC-VAL-V01 Validation summary lists all unresolved errors, grouped @regression @validation @p2 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('review-validation-errors-items').or(locator('[data-testid="review-validation-errors"] li, [data-testid^="validation-item"], .validation-summary li, .validation-summary a')).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('review-validation-errors-items').or(locator('[data-testid="review-validation-errors"] li, [data-testid^="validation-item"], .validation-summary li, .validation-summary a')).first() with timeout 8000ms
+      - waiting for getByTestId('review-validation-errors-items').or(locator('[data-testid="review-validation-errors"] li, [data-testid^="validation-item"], .validation-summary li, .validation-summary a')).first()
+
+
+      74 |   test(...tc('VAL-V01'), async ({ pages }) => {
+      75 |     await reviewWithMissingDocuments(pages);
+    > 76 |     await expect(pages.review.validation.items.first()).toBeVisible();
+         |                                                         ^
+      77 |     const texts = await pages.review.validation.texts();
+      78 |     expect(texts.some((t) => M.mandatoryDocument.test(t)), `a summary item about documents in: ${JSON.stringify(texts)}`).toBeTruthy();
+      79 |   });
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\documents.spec.js:76:57
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-documents-Validation-Su-6d630-ed-regression-validation-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Validation Summary (review step with unresolved errors) › TC-VAL-V02 Clicking a summary item navigates to the field/section @regression @validation @p3" classname="ui\documents.spec.js" time="25.985">
+<properties>
+<property name="scenario" value="VAL-V02">
+</property>
+<property name="risk" value="R32">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 10000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › ui\documents.spec.js:81:3 › Validation Summary (review step with unresolved errors) › TC-VAL-V02 Clicking a summary item navigates to the field/section @regression @validation @p3 
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByTestId('review-validation-errors-items').or(locator('[data-testid="review-validation-errors"] li, [data-testid^="validation-item"], .validation-summary li, .validation-summary a')).first()
+
+
+       at ..\components\ValidationSummary.js:22
+
+      20 |   }
+      21 |   async clickItem(index = 0) {
+    > 22 |     await this.items.nth(index).click();
+         |                                 ^
+      23 |   }
+      24 | }
+      25 |
+        at ValidationSummary.clickItem (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\components\ValidationSummary.js:22:33)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\documents.spec.js:85:35
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-documents-Validation-Su-6406e-on-regression-validation-p3-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Validation Summary (review step with unresolved errors) › TC-VAL-V03 Submit stays disabled until critical errors are resolved @regression @validation @p1 @release-gate @seeded" classname="ui\documents.spec.js" time="24.092">
+<properties>
+<property name="scenario" value="VAL-V03">
+</property>
+<property name="risk" value="R31">
+</property>
+<property name="defect" value="RI-17">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeDisabled() failed" type="expect.toBeDisabled">
+<![CDATA[  [chromium] › ui\documents.spec.js:91:3 › Validation Summary (review step with unresolved errors) › TC-VAL-V03 Submit stays disabled until critical errors are resolved @regression @validation @p1 @release-gate @seeded › Submit is disabled while errors exist 
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  getByTestId('review-submit-application-button').or(getByRole('button', { name: /^submit/i })).first()
+    Expected: disabled
+    Received: enabled
+    Timeout:  8000ms
+
+    Call log:
+      - Expect "toBeDisabled" getByTestId('review-submit-application-button').or(getByRole('button', { name: /^submit/i })).first() with timeout 8000ms
+      - waiting for getByTestId('review-submit-application-button').or(getByRole('button', { name: /^submit/i })).first()
+        19 × locator resolved to <button class="btn btn-primary" data-testid="review-submit-application-button">↵                            Submit Application↵ …</button>
+           - unexpected value "enabled"
+
+
+      93 |     await test.step('Submit is disabled while errors exist', async () => {
+      94 |       await captureEvidence(page, testInfo, 'submit-state-with-errors');
+    > 95 |       await expect(pages.review.submitButton).toBeDisabled();
+         |                                               ^
+      96 |     });
+      97 |     await test.step('Submit becomes enabled once the errors are resolved', async () => {
+      98 |       await page.goto(routes.step(applicationIdFromUrl(page.url()), 'documents')); // the real review page has no Back button
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\documents.spec.js:95:47
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\documents.spec.js:93:5
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-documents-Validation-Su-e7c79-tion-p1-release-gate-seeded-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="ui\product.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="11" failures="0" skipped="6" time="70.557" errors="0">
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V01 Catalog displays expected Whole Life products @regression @product @p1 @smoke @release-gate" classname="ui\product.spec.js" time="8.548">
+<properties>
+<property name="scenario" value="PROD-V01">
+</property>
+<property name="risk" value="R16">
+</property>
+</properties>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V02 Product details page shows features, eligibility, limits @regression @product @p2" classname="ui\product.spec.js">
+<properties>
+<property name="scenario" value="PROD-V02">
+</property>
+<property name="risk" value="R16">
+</property>
+<property name="skip" value="No product details link in this build">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › face value limits › TC-PROD-V03 Face value below minimum rejected @regression @product @p2" classname="ui\product.spec.js">
+<properties>
+<property name="scenario" value="PROD-V03">
+</property>
+<property name="risk" value="R17">
+</property>
+<property name="skip" value="Set FACE_VALUE_MIN to run (Q13)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › face value limits › TC-PROD-V04 Face value above maximum rejected @regression @product @p2" classname="ui\product.spec.js">
+<properties>
+<property name="scenario" value="PROD-V04">
+</property>
+<property name="risk" value="R17">
+</property>
+<property name="skip" value="Set FACE_VALUE_MAX to run (Q13)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V05 Premium recalculates when frequency changes @regression @product @p1 @release-gate @seeded @api" classname="ui\product.spec.js" time="9.12">
+<properties>
+<property name="scenario" value="PROD-V05">
+</property>
+<property name="risk" value="R18">
+</property>
+<property name="defect" value="RI-12">
+</property>
+</properties>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V06 Review-page premium matches configuration page @regression @product @p1 @release-gate @seeded" classname="ui\product.spec.js" time="15.9">
+<properties>
+<property name="scenario" value="PROD-V06">
+</property>
+<property name="risk" value="R18">
+</property>
+<property name="risk" value="R19">
+</property>
+<property name="defect" value="RI-12">
+</property>
+</properties>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V07 Suitability warning shown for risk-profile mismatch @regression @product @p2 @seeded" classname="ui\product.spec.js">
+<properties>
+<property name="scenario" value="PROD-V07">
+</property>
+<property name="risk" value="R16">
+</property>
+<property name="defect" value="RI-09">
+</property>
+<property name="skip" value="Set SUITABILITY_PRODUCT_PATTERN to run (Q13)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V08 Product eligibility validated against client age @regression @product @p2 @seeded @api" classname="ui\product.spec.js">
+<properties>
+<property name="scenario" value="PROD-V08">
+</property>
+<property name="risk" value="R16">
+</property>
+<property name="defect" value="RI-09">
+</property>
+<property name="skip" value="Set INELIGIBLE_AGE and INELIGIBLE_AGE_PRODUCT_PATTERN to run (Q13)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V09 Payment term and policy term options follow product rules @regression @product @p2" classname="ui\product.spec.js" time="8.181">
+<properties>
+<property name="scenario" value="PROD-V09">
+</property>
+<property name="risk" value="R18">
+</property>
+</properties>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V10 Inactive product cannot be selected @regression @product @p2" classname="ui\product.spec.js">
+<properties>
+<property name="scenario" value="PROD-V10">
+</property>
+<property name="risk" value="R16">
+</property>
+<property name="skip" value="No inactive product is displayed in this environment">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Product Selection &amp; Policy Configuration › TC-PROD-V11 Product configuration persists after save draft and reload @regression @product @p2 @seeded" classname="ui\product.spec.js" time="10.401">
+<properties>
+<property name="scenario" value="PROD-V11">
+</property>
+<property name="risk" value="R33">
+</property>
+<property name="risk" value="R18">
+</property>
+<property name="defect" value="RI-16">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="ui\riders.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="chromium" tests="7" failures="3" skipped="2" time="90.417" errors="0">
+<testcase name="Rider Selection › TC-RIDER-V01 Eligible protection rider (ADB) added to premium summary @regression @rider @p2 @smoke" classname="ui\riders.spec.js" time="11.935">
+<properties>
+<property name="scenario" value="RIDER-V01">
+</property>
+<property name="risk" value="R23">
+</property>
+</properties>
+</testcase>
+<testcase name="Rider Selection › TC-RIDER-V02 Rider coverage cannot exceed base face value @regression @rider @p1 @release-gate @seeded @api" classname="ui\riders.spec.js" time="20.725">
+<properties>
+<property name="scenario" value="RIDER-V02">
+</property>
+<property name="risk" value="R20">
+</property>
+<property name="defect" value="RI-10">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expected a visible message matching /cannot exceed base policy sum assured|exceed|greater than|more than|face value|coverage/i" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\riders.spec.js:33:3 › Rider Selection › TC-RIDER-V02 Rider coverage cannot exceed base face value @regression @rider @p1 @release-gate @seeded @api 
+
+    Error: expected a visible message matching /cannot exceed base policy sum assured|exceed|greater than|more than|face value|coverage/i
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /cannot exceed base policy sum assured|exceed|greater than|more than|face value|coverage/i }).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - expected a visible message matching /cannot exceed base policy sum assured|exceed|greater than|more than|face value|coverage/i getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /cannot exceed base policy sum assured|exceed|greater than|more than|face value|coverage/i }).first() with timeout 8000ms
+      - waiting for getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /cannot exceed base policy sum assured|exceed|greater than|more than|face value|coverage/i }).first()
+
+
+       at ..\pages\BasePage.js:169
+
+      167 |       this.$$(S.common.anyError).filter({ hasText: pattern }).first(),
+      168 |       `expected a visible message matching ${pattern}`,
+    > 169 |     ).toBeVisible();
+          |       ^
+      170 |   }
+      171 |
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+        at RiderPage.expectErrorText (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:169:7)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\riders.spec.js:40:23
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-riders-Rider-Selection--58212--p1-release-gate-seeded-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Rider Selection › TC-RIDER-V03 Age-ineligible rider disabled or blocked @regression @rider @p2" classname="ui\riders.spec.js">
+<properties>
+<property name="scenario" value="RIDER-V03">
+</property>
+<property name="risk" value="R22">
+</property>
+<property name="skip" value="Set RIDER_AGE_RESTRICTED_PATTERN to run (Q15)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Rider Selection › TC-RIDER-V04 Maximum rider count enforced with message @regression @rider @p2" classname="ui\riders.spec.js" time="21.693">
+<properties>
+<property name="scenario" value="RIDER-V04">
+</property>
+<property name="risk" value="R22">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expected a visible message matching /(maximum|more than|no more than|at most).*(4|four)|maximum|max|limit|no more than/i" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\riders.spec.js:53:3 › Rider Selection › TC-RIDER-V04 Maximum rider count enforced with message @regression @rider @p2 
+
+    Error: expected a visible message matching /(maximum|more than|no more than|at most).*(4|four)|maximum|max|limit|no more than/i
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /(maximum|more than|no more than|at most).*(4|four)|maximum|max|limit|no more than/i }).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - expected a visible message matching /(maximum|more than|no more than|at most).*(4|four)|maximum|max|limit|no more than/i getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /(maximum|more than|no more than|at most).*(4|four)|maximum|max|limit|no more than/i }).first() with timeout 8000ms
+      - waiting for getByTestId('validation-error-alert').or(locator('[data-testid="validation-error-alert"], [data-testid="beneficiary-error-summary"], [data-testid="review-validation-errors"], .field-error, .invalid-feedback, .text-danger, [role="alert"]')).filter({ hasText: /(maximum|more than|no more than|at most).*(4|four)|maximum|max|limit|no more than/i }).first()
+
+
+       at ..\pages\BasePage.js:169
+
+      167 |       this.$$(S.common.anyError).filter({ hasText: pattern }).first(),
+      168 |       `expected a visible message matching ${pattern}`,
+    > 169 |     ).toBeVisible();
+          |       ^
+      170 |   }
+      171 |
+      172 |   /** The user was NOT moved on: the step identity is unchanged after a rejected Save & Continue. */
+        at RiderPage.expectErrorText (C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\pages\BasePage.js:169:7)
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\riders.spec.js:70:23
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-riders-Rider-Selection--45356-message-regression-rider-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Rider Selection › TC-RIDER-V05 Mutually exclusive waiver riders cannot both be selected @regression @rider @p2 @seeded" classname="ui\riders.spec.js">
+<properties>
+<property name="scenario" value="RIDER-V05">
+</property>
+<property name="risk" value="R21">
+</property>
+<property name="defect" value="RI-11">
+</property>
+<property name="skip" value="Set RIDER_WAIVER_A_PATTERN and RIDER_WAIVER_B_PATTERN to run (Q15)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Rider Selection › TC-RIDER-V06 Critical illness rider triggers health questionnaire @regression @rider @p2" classname="ui\riders.spec.js" time="19.322">
+<properties>
+<property name="scenario" value="RIDER-V06">
+</property>
+<property name="risk" value="R22">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › ui\riders.spec.js:89:3 › Rider Selection › TC-RIDER-V06 Critical illness rider triggers health questionnaire @regression @rider @p2 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('health-questionnaire').or(locator('[data-testid="health-questionnaire"], form.health-questionnaire, [role="dialog"]')).first()
+    Expected: visible
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('health-questionnaire').or(locator('[data-testid="health-questionnaire"], form.health-questionnaire, [role="dialog"]')).first() with timeout 8000ms
+      - waiting for getByTestId('health-questionnaire').or(locator('[data-testid="health-questionnaire"], form.health-questionnaire, [role="dialog"]')).first()
+
+
+      92 |     await needRider(pages, ci, 'critical illness');
+      93 |     await pages.rider.add(ci);
+    > 94 |     await expect(pages.rider.questionnaire).toBeVisible();
+         |                                             ^
+      95 |   });
+      96 |
+      97 |   test(...tc('RIDER-V07'), async ({ pages, page }, testInfo) => {
+        at C:\Users\talentfarm_learner\Desktop\InsurancePlaywright-main\tests\ui\riders.spec.js:94:45
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\reports\test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\reports\test-results\ui-riders-Rider-Selection--85d65-onnaire-regression-rider-p2-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Rider Selection › TC-RIDER-V07 Rider premium itemized and total premium updated @regression @rider @p2 @seeded" classname="ui\riders.spec.js" time="15.949">
+<properties>
+<property name="scenario" value="RIDER-V07">
+</property>
+<property name="risk" value="R23">
+</property>
+<property name="defect" value="RI-12">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="api\applications.api.spec.js" timestamp="2026-10-28T12:17:34.126Z" hostname="api" tests="10" failures="0" skipped="10" time="0.027" errors="0">
+<testcase name="API validation › TC-API-V01 Products API returns 200 and expected schema @regression @api @p2 @smoke" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V01">
+</property>
+<property name="risk" value="R37">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › TC-API-V02 Applications API requires authorization (401/403) @regression @api @p1 @smoke @release-gate" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V02">
+</property>
+<property name="risk" value="R04">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › draft-based negative tests › TC-API-V03 Client API rejects future / underage DOB @regression @api @p2 @seeded" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V03">
+</property>
+<property name="risk" value="R11">
+</property>
+<property name="defect" value="RI-05">
+</property>
+<property name="defect" value="RI-19">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › draft-based negative tests › TC-API-V04 Validate API returns beneficiary allocation error @regression @api @p2 @seeded" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V04">
+</property>
+<property name="risk" value="R24">
+</property>
+<property name="defect" value="RI-13">
+</property>
+<property name="defect" value="RI-19">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › draft-based negative tests › TC-API-V05 Submit API rejects incomplete application @regression @api @p1 @release-gate @seeded" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V05">
+</property>
+<property name="risk" value="R29">
+</property>
+<property name="risk" value="R35">
+</property>
+<property name="defect" value="RI-06">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › draft-based negative tests › TC-API-V10 Documents API rejects invalid type and oversized file @regression @api @p2" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V10">
+</property>
+<property name="risk" value="R30">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › TC-API-V06 Status API matches the applications list @regression @api @p2 @seeded" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V06">
+</property>
+<property name="risk" value="R07">
+</property>
+<property name="defect" value="RI-18">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › TC-API-V08 Applications API returns only logged-in agent records @regression @api @p2" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V08">
+</property>
+<property name="risk" value="R08">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › TC-API-V09 Riders API schema, eligibility and dependency rules @regression @api @p2" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V09">
+</property>
+<property name="risk" value="R37">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API validation › TC-API-V11 Status API returns history and timestamps @regression @api @p2" classname="api\applications.api.spec.js">
+<properties>
+<property name="scenario" value="API-V11">
+</property>
+<property name="risk" value="R34">
+</property>
+<property name="skip" value="ENVIRONMENT: the API does not answer at http://34.93.84.61:8081/api/products (HTTP 404). Run npm run discover:api / ask for the API address, then set INSURANCE_API_URL. See defect AD-11. (API_REQUIRED=true makes this a failure.)">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>
