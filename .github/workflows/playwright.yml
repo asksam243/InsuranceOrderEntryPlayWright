@@ -9,7 +9,7 @@ on:
     inputs:
       grep: { description: 'Tag filter', default: '@smoke' }
   schedule:
-    - cron: '0 2 * * *'   # nightly regression
+    - cron: '0 2 * * *'   # nightly regression. CONFIRM with the lab owner first: this is a SHARED VM and some tests lock/reset accounts
 concurrency: { group: lab-environment, cancel-in-progress: false }   # never two runs against the lab at once
 jobs:
   test:

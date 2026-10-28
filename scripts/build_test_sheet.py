@@ -202,7 +202,7 @@ for i, (lbl, f, nf) in enumerate(rows):
     if nf: c.number_format = nf
 sm.cell(row=k + 6, column=1, value='Notes').font = Font(name=F, bold=True)
 for i, n in enumerate(['Automated = a Playwright test exists for the case. Blocked = cannot be automated yet (database access, Q04).',
-                       'Four live runs exist (Run Results sheet): v1 passed 5/15 smoke and 10/96 overall; the latest smoke run passed 12/15 (2 API tests skipped as environment, 1 failure open: RIDER-V01, fixed in code). The full suite has NOT been re-run since the first round of fixes.']):
+                       'Five live runs exist (Run Results sheet): v1 passed 5/15 smoke and 10/96 overall (RUN-2); the latest smoke run (RUN-5) passed 12/15 (2 API tests skipped as environment, 1 failure open: RIDER-V01, AD-13). The full suite has NOT been re-run since RUN-2.']):
     sm.cell(row=k + 7 + i, column=1, value=n).font = Font(name=F, size=9, italic=True)
 
 # ---------------------------------------------------------------- Limitations

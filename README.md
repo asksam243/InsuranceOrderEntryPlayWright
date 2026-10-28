@@ -1,16 +1,18 @@
 # Insurance Order Entry - Playwright QA Automation (Submission 2)
 
 Playwright (JavaScript, page-object model) tests for the Whole Life agent order-entry platform, built on the Submission 1
-study. 105 designed test cases (`test-design/Test_Case_Design_Sheet.xlsx`), 95 automated, 10 database checks blocked on access.
+study. 106 designed test cases (105 from Submission 1 plus AUTH-V14 carried over from the starter project; `test-design/Test_Case_Design_Sheet.xlsx`), 96 automated, 10 database checks blocked on access.
 
-> **Status:** built and framework-verified, **not yet run against the real lab application**. Do step 0 first.
+> **Status:** the suite has been run on the lab VM five times (see `test-design/runs.js` and the *Run Results* sheet). Latest smoke run (RUN-5, 28 Oct, merged repo v4):
+> 12 passed, 1 failed (RIDER-V01, AD-13), 2 skipped (API-V01/V02, environment issue AD-11). The **full suite has not been re-run since RUN-2 (26 Oct: 10 passed, 73 failed, 13 skipped, on the first code version)**,
+> so there is no current full-suite result. Fixes made after RUN-2 that were validated only against an offline mock are not evidence about the lab. Do step 0 for anything still unconfirmed.
 
 ## 0. Explore the live application first (about 90 minutes)
 The scripts guess routes, messages and limits that the documents never state. Resolve them by hand **before** trusting a run:
 
 1. Walk the full journey once (login to submitted application) and note each step's URL and the exact validation wording.
 2. Open the **Exploration Log** sheet: 15 items, each saying what to find and where to record it (`.env`, `config/`). Do `ROUTES`, `Q02`, `Q03`, `Q06` first.
-3. `npm run discover` (add `-- --walk` to also record validation messages), then `npm run verify:selectors`. Fix `config/selectors.js` where a test id is wrong. Only `login-email/password/submit` are confirmed today.
+3. `npm run discover` (add `-- --walk` to also record validation messages), then `npm run verify:selectors`. Fix `config/selectors.js` where a test id is wrong. Login, dashboard, client / address / KYC, product, beneficiary and document ids have been exercised live (RUN-3 to RUN-5); the other ids are still unconfirmed, so `verify:selectors` remains the check.
 
 Open items you leave undone make their tests **skip with a reason** instead of failing falsely.
 
@@ -26,10 +28,10 @@ npm run test:unit           # offline self-checks, no application needed
 ## 2. Running
 | Command | What runs |
 |---|---|
-| `npm run test:smoke` | 14 fast tests: is the environment alive and the main path working |
+| `npm run test:smoke` | 15 fast tests: is the environment alive and the main path working |
 | `npm run test:gate` | the **release gate**: 19 P1 scenarios that must pass for a release |
 | `npm run test:regression` | everything (P1 + P2 + P3) |
-| `npm run test:seeded` | the 38 checks that target a seeded-defect theme (RI-01..RI-20) |
+| `npm run test:seeded` | the 39 checks that target a seeded-defect theme (RI-01..RI-20) |
 | `npm run test:api` / `test:ui` / module scripts | by layer or module (`test:auth`, `test:client`, `test:product` ...) |
 | `npm run report` | open the HTML report (`reports/html-report`) |
 
@@ -71,7 +73,7 @@ sheet and the code cannot drift. `npm run check:traceability` fails on any orpha
 Known defects already logged: `EXPECT_FAIL_DEFECTS=RI-05,RI-07` marks them expected-to-fail; the test goes red the day the defect is fixed.
 
 ## 8. Known limitations
-Not yet run on the real app; selectors, API payload shapes and message wording unconfirmed; database layer blocked (Q04); Chromium primary
+Full suite not re-run on the lab since RUN-2; some selectors, API payload shapes and message wording still unconfirmed (see `docs/confirmed-environment-facts.md`); database layer blocked (Q04); Chromium primary
 (Firefox/WebKit smoke with `CROSS_BROWSER=true`). Full list: *Limitations* sheet. Troubleshooting: timeouts on the first `goto` mean a stale
 `INSURANCE_BASE_URL` (run `npm run health`); `Flow could not leave the step "X"` lists the on-screen messages that stopped it.
 
